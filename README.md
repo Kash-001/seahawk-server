@@ -36,6 +36,22 @@ CREATE USER 'SeahawkAdmin'@'localhost' IDENTIFIED BY 'admSeahawk1!';
 
 GRANT ALL PRIVILEGES ON SeahawkDB.* TO 'SeahawkAdmin'@'localhost';
 
+USE SeahawkDB;
+
+CREATE TABLE active_probes (
+    probe_ip VARCHAR(15) NOT NULL,
+    probe_hostname VARCHAR(255) NOT NULL,
+    probe_client_version VARCHAR(10) NOT NULL,
+    date_added DATE NOT NULL,
+    PRIMARY KEY (probe_ip)
+);
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
 FLUSH PRIVILEGES;
 EXIT;
 ```
