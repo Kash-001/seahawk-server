@@ -1,2 +1,5 @@
-git clone le dossier dans /var/www/
-ajouter un vhost avec apache2 et coller la conf dedans
+**SEAHAWK SERVER DEPLOY**
+
+- git clone into folder > /var/www/
+- creat apache2 vhost
+- paste apache2 config in it
